@@ -1,31 +1,50 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Login</title>
-  <link rel="stylesheet" href="login.css">
-  <link rel="stylesheet" href="script.js">
-  <link rel="stylesheet" href="login.js">
+
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-  <h1>🎲 Sistema de Sessões</h1>
+<button onclick="toggleMenu()">☰</button>
 
-<input type="email" id="email" placeholder="Email">
-<input type="password" id="senha" placeholder="Senha">
-
-<button onclick="login()">Entrar</button>
-
-<p id="msg"></p>
-<p id="erro"></p>
-
-<a href="cadastro.html">Criar conta</a>
-
-  <p id="erro"></p>
+<div id="menu" style="display:none;">
+  <button onclick="abrirCadastroMesa()">Cadastrar Mesa</button>
+  <button onclick="abrirVotacao()">Votação</button>
 </div>
 
-<script src="login.js"></script>
+<h2 id="infoUser"></h2>
+<button onclick="logout()">Logout</button>
+
+<div id="calendar"></div>
+
+<!-- MODAL MESA -->
+<div id="modalMesa" class="modal">
+  <div class="modal-content">
+    <h2>Criar Mesa</h2>
+    <input id="mesaNome" placeholder="Nome">
+    <input id="mesaSistema" placeholder="Sistema">
+    <div id="listaUsuarios"></div>
+    <button onclick="criarMesa()">Criar</button>
+    <button onclick="fecharModal()">Cancelar</button>
+  </div>
+</div>
+
+<!-- MODAL SOLICITAÇÃO -->
+<div id="modalSolicitacao" class="modal">
+  <div class="modal-content">
+    <h2>Agendar Sessão</h2>
+    <select id="selectMesa"></select>
+    <input id="horaSessao" placeholder="Hora (20:00)">
+    <button onclick="confirmarSolicitacao()">Confirmar</button>
+    <button onclick="fecharModal()">Cancelar</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
