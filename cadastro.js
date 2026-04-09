@@ -13,7 +13,7 @@ async function cadastrar() {
   document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM carregado");
   });
-  const res = await fetch("http://localhost:3000/cadastro", {
+  const res = await fetch("https://calendario-de-sessoes.onrender.com/cadastro", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
