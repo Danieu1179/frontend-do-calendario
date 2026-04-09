@@ -1,5 +1,5 @@
 async function login() {
-  const res = await fetch("http://localhost:3000/login", {
+  const res = await fetch("https://calendario-de-sessoes.onrender.com/login", {
     method: "POST",
     headers: {"Content-Type":"application/json"},
     body: JSON.stringify({
