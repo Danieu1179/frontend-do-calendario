@@ -1,8 +1,7 @@
 const API = "https://calendario-de-sessoes.onrender.com";
 
 async function login() {
- 
-  const res = await fetch(`${API}/cadastro`, {
+  const res = await fetch(`${API}/login`, {
     method: "POST",
     headers: {"Content-Type":"application/json"},
     body: JSON.stringify({
