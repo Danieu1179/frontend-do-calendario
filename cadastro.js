@@ -1,4 +1,4 @@
-import { API } from "script.js";
+const API = "https://calendario-de-sessoes.onrender.com";
 
 async function cadastrar() {
   const nomeInput = document.getElementById("nome");
