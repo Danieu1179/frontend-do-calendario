@@ -15,7 +15,7 @@ async function cadastrar() {
   document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM carregado");
   });
-  const res = await fetch(`${API_URL}/cadastro`, {
+  const res = await fetch(`${API}/cadastro`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
