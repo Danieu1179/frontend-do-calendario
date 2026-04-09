@@ -1,4 +1,4 @@
-export const API = "https://calendario-de-sessoes.onrender.com";
+const API = "https://calendario-de-sessoes.onrender.com";
 const usuario = JSON.parse(localStorage.getItem("usuario"));
 
 if (!usuario) window.location.href = "login.html";
