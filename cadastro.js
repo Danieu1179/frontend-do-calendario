@@ -1,4 +1,4 @@
-import { API } from "./script.js";
+import { API } from "script.js";
 
 async function cadastrar() {
   const nomeInput = document.getElementById("nome");
